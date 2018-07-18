@@ -2,3 +2,9 @@
 **/.DS_Store
 
 data/
+
+dask-worker-space/
+
+scripts/__pycache__/
+
+feature_selection/
