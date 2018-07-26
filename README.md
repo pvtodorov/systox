@@ -67,16 +67,24 @@ synapse login -u USER - p PASS --rememberMe
 ```
 You are now logged in and can pull data from the Synapse project [syn11697964](https://www.synapse.org/#!Synapse:syn11697964). This is all automated via bash scripts and should require no additional configuration or direct intreaction with Synapse.
 
+
+## Make the bash scripts executable
+We use a number of bash scripts to automate fetching data from synapse, processing data, and completing a number of tasks. These are located in the `bash_scripts` directory. After cloning it's likely that they need to be made executable to run.
+```
+chmod 700 bash_scripts/*
+```
+
+
 ## Get the original data
 The original data execute the following script
 ```
-./get_original_data.sh
+./bash_scripts/get_original_data.sh
 ```
 
 ## Process the data into a vector for analysis
-The original data must be processed in order to produce a 2d vector that can be fed into the Random Forest for feature selection. This can be done by
+The original data must be processed in order to produce 2d vectors for both genes and imaging that can be fed into the Random Forest for feature selection. This can be done by
 ```
-./make_vector.sh
+./bash_scripts/make_vectors.sh
 ```
 
 ## Feature selection
@@ -84,12 +92,12 @@ Feature selection was run over 100 randomized sets of folds in which data was sp
 
 You can retreive the same folds we used from synapse
 ```
-PLACE FETCH FOLD SCRIPT HERE
+./bash_scripts/get_folds.sh
 ```
 
 You can get a new set of folds by running. Note that this may change the outcome of the analysis.
 ```
-PLACE FOLD SCRIPT HERE
+./bash_scripts/generate_folds.sh
 ```
 
 ### Recursive Feature Elimination & Predictions
