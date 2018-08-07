@@ -64,7 +64,7 @@ def plot_rankings(df_rc, vc, output_dir):
     ax = sns.barplot(x='count', y='variable', hue='time',
                      data=df_rc[df_rc['variable'].isin(cols_filter)],
                      hue_order=['early', 'late'],
-                     palette=['#67a9cf', '#ef8a62'],
+                     palette=['#7fbf7b', '#af8dc3'],
                      dodge=False)
     # ax.add_legend(label_order = ['early', 'late'])
     save_path = output_dir + 'rc_vc_' + str(vc)
@@ -90,11 +90,10 @@ for databuild in databuilds:
             path = base_folder + n + '/all_rankings.csv'
             df_r = get_rankings_df(path)
             df_rc = get_ranking_counts(df_r, vc)
-            output_dir = 'models/' + databuild + '/' + dataset_type + '/' + n + '/'
+            output_dir = 'plots/' + databuild + '/' + dataset_type + '/' + n + '/'
             if not os.path.exists(output_dir):
                 os.makedirs(output_dir)
             dump_lists_of_features(df_rc, vc, output_dir)
-            output_dir = 'plots/' + databuild + '/' + dataset_type + '/' + n + '/'
             if not os.path.exists(output_dir):
                 os.makedirs(output_dir)
             plot_rankings(df_rc, vc, output_dir)
