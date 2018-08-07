@@ -12,7 +12,7 @@ By following the instructions listed here a user can run through the whole proce
 * A *NIX based system for running bash scripts
 * git [(link)](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 * Python 3.4+ [(link)](https://www.python.org/downloads/)
-* A Synapse account 
+* A Synapse account [(link)](http://docs.synapse.org/articles/getting_started.html)
 
 Optional:
 * High performance comuting environment (optional)
