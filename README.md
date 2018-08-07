@@ -3,7 +3,7 @@
 ## About
 This repo contains the code and instructions for regenerating the feature selection and AUC performance plots in the manuscript *"A Systems Toxicology Approach for Mechanistic De-Risking and Prediction of Kidney Toxicity In Vitro"*.
 
-This repository does not contain any of the data, which is instead housed on Synapse at `synid`.
+This repository does not contain any of the data, which is instead housed on Synapse at `syn11697964`.
 
 By following the instructions listed here a user can run through the whole process or parts of it.
 
@@ -122,10 +122,10 @@ Fetch the files from synapse by:
 ```
 ###### list of settings files
 ```
-feature_selection/01/genes/NORMAL/settings.json
-feature_selection/01/genes/NORMAL_scrambled/settings.json
-feature_selection/01/imaging/NORMAL/settings.json
-feature_selection/01/imaging/NORMAL_scrambled/settings.json
+`run_settings/01_genes_NORMAL_settings.json`
+`run_settings/01_genes_NORMAL_scrambled_settings.json`
+`run_settings/01_imaging_NORMAL_settings.json`
+`run_settings/01_imaging_NORMAL_scrambled_settings.json`
 ```  
 ##### feature selection Python script
 ```
