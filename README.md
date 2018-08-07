@@ -122,10 +122,10 @@ Fetch the files from synapse by:
 ```
 ###### list of settings files
 ```
-`run_settings/01_genes_NORMAL_settings.json`
-`run_settings/01_genes_NORMAL_scrambled_settings.json`
-`run_settings/01_imaging_NORMAL_settings.json`
-`run_settings/01_imaging_NORMAL_scrambled_settings.json`
+run_settings/01_genes_NORMAL_settings.json
+run_settings/01_genes_NORMAL_scrambled_settings.json
+run_settings/01_imaging_NORMAL_settings.json
+run_settings/01_imaging_NORMAL_scrambled_settings.json
 ```  
 ##### feature selection Python script
 ```
