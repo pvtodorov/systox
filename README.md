@@ -12,8 +12,7 @@ By following the instructions listed here a user can run through the whole proce
 * A *NIX based system for running bash scripts
 * git [(link)](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 * Python 3.4+ [(link)](https://www.python.org/downloads/)
-* A Synapse account
-* 
+* A Synapse account 
 
 Optional:
 * High performance comuting environment (optional)
@@ -107,7 +106,7 @@ We launched recursive feature elimination and prediction jobs for each of these 
 #### Getting the results from Synapse
 To fetch pre-computed results from Synapse 
 ```
-./get_feature_selection.sh
+./bash_scripts/get_feature_selection.sh
 ```
 
 #### Running the analysis
@@ -117,8 +116,9 @@ click to expand
 </summary>
 
 ##### get the settings files
+Fetch the files from synapse by:
 ```
-./get_settings.sh
+./bash_scripts/get_settings.sh
 ```
 ###### list of settings files
 ```
@@ -139,5 +139,22 @@ python scripts/predict.py <settings file> <fold number>
 * The fold numbers must be an array from 0-99
 </details>
 
+### Processing the predictions
+
+Once feature rankings and predictions are present for each settings configuration, they are processed further before plotting. Predictions are scored, reportin the area under the receiver operating characteristic (AUC-ROC) curve and stored in a single file. Feature rankings are aggregated in another file.
+
+To execute this
+```
+./bash_scripts/process_predictions.sh
+```
+
+
 ### Creating the plots in Figure 3
-Expand on this
+The plots from figure 3 can be created by executing the following
+```
+./bash_scripts/draw_lots.sh
+```
+This will generate a `plots/` directory. The directory will have the same folder structure as the `feature_selection/` directory. In each run's subdirectory there will be a number of files:
+
+- `rc_vc.json` will hold data for each step of the recursive feature elimination as a list of features at `n_features`
+- the plots contained in figure 3 as `.png` and `.pdf` files
