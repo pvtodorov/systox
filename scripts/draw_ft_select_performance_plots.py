@@ -104,8 +104,9 @@ for databuild in databuilds:
             if not os.path.exists(output_dir):
                 os.makedirs(output_dir)
             draw_boxplots(df, 50, output_dir + n, output_dir)
-            draw_boxplots(df, df['variable'].max(), output_dir + n, output_dir)
-            # draw_band(df, 50, output_dir + n, output_dir)
-            # draw_band(df, df['variable'].max(), n, output_dir)
-            # draw_points(df, 50, n, output_dir)
-            # draw_points(df, df['variable'].max(), n, output_dir)
+            # boxplots do not render well for the entire 1000+ span of features
+            # draw_boxplots(df, df['variable'].max(), output_dir+n, output_dir)
+            draw_band(df, 50, output_dir + n, output_dir)
+            draw_band(df, df['variable'].max(), n, output_dir)
+            draw_points(df, 50, n, output_dir)
+            draw_points(df, df['variable'].max(), n, output_dir)
