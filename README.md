@@ -103,6 +103,19 @@ You can get a new set of folds by running. Note that this may change the outcome
 
 We launched recursive feature elimination and prediction jobs for each of these 100 sets of folds on the Harvard Medical School Orchestra cluster. If you would like to run this on your own cluster, expand the section below. Otherwise you may follow the instructions to fetch our files from synapse.
 
+#### get the settings files
+Fetch the files from synapse by:
+```
+./bash_scripts/get_settings.sh
+```
+###### list of settings files
+```
+run_settings/01_genes_NORMAL_settings.json
+run_settings/01_genes_NORMAL_scrambled_settings.json
+run_settings/01_imaging_NORMAL_settings.json
+run_settings/01_imaging_NORMAL_scrambled_settings.json
+```
+
 #### Getting the results from Synapse
 To fetch pre-computed results from Synapse 
 ```
@@ -115,18 +128,7 @@ To fetch pre-computed results from Synapse
 click to expand
 </summary>
 
-##### get the settings files
-Fetch the files from synapse by:
-```
-./bash_scripts/get_settings.sh
-```
-###### list of settings files
-```
-run_settings/01_genes_NORMAL_settings.json
-run_settings/01_genes_NORMAL_scrambled_settings.json
-run_settings/01_imaging_NORMAL_settings.json
-run_settings/01_imaging_NORMAL_scrambled_settings.json
-```  
+
 ##### feature selection Python script
 ```
 python scripts/feature_select.py <settings file> <fold number>
