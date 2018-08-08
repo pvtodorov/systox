@@ -38,10 +38,10 @@ def load_dataset(path, cmpDict, posClass):
     return dataset
 
 
-infolder = '../data/processed_data/00/LISS/05/'
+infolder = 'data/processed_data/01/LISS/05/'
 infile = 'log_medianmax_AC_wide.csv'
-outfolder = '../data/processed_data/folds/'
-cmp_path = '../data/lists/allCmp_class_ID_list.csv'
+outfolder = 'data/processed_data/folds/'
+cmp_path = 'data/lists/allCmp_class_ID_list.csv'
 
 
 if not os.path.exists(outfolder):
