@@ -98,7 +98,7 @@ def build_rank_list(ranked_features_df):
     print_to_log('build_rank_list')
     m = ranked_features_df.as_matrix()
     rank_list = []
-    for i in range(0, 9):
+    for i in range(0, (np.shape(m)[1]-1)):
         rank_list.append({a: b for a, b in zip(m[:, 0], m[:, i + 1])})
     return rank_list
 
