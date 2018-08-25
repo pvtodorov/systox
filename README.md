@@ -154,7 +154,7 @@ To execute this
 ### Creating the plots in Figure 3
 The plots from figure 3 can be created by executing the following
 ```
-./bash_scripts/draw_lots.sh
+./bash_scripts/draw_plots.sh
 ```
 This will generate a `plots/` directory. The directory will have the same folder structure as the `feature_selection/` directory. In each run's subdirectory there will be a number of files:
 
