@@ -53,7 +53,7 @@ dataset = load_dataset(infolder + infile, cmpDict, ['C'])
 X = dataset['X']
 y = dataset['y']
 
-skf = StratifiedKFold(n_splits=9, shuffle=True)
+skf = StratifiedKFold(n_splits=9, shuffle=True, random_state=47)
 all_folds = []
 while len(all_folds)<100:
     skfolds = []
