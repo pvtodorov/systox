@@ -6,6 +6,7 @@ from collections import defaultdict
 from sklearn.metrics import roc_auc_score, recall_score
 from fit_and_select import *
 from tqdm import tqdm
+import os
 
 
 def specificity_score(y_true, y_pred):
@@ -33,10 +34,12 @@ if __name__ == '__main__':
     auc_scores_dict = defaultdict(lambda: [])
     sens_scores_dict = defaultdict(lambda: [])
     spec_scores_dict = defaultdict(lambda: [])
-    for i in tqdm(range(0, 100)):
-        path = settings['run_path'] + settings['run_name'] + '/' \
-            + str(i) + '/output/'
-        df = pd.read_csv(path + 'predictions.csv')
+    path = settings['run_path'] + settings['run_name'] + '/'
+    runs = [x for x in os.listdir(path) if os.path.isdir(path + x)]
+    runs = [x for x in runs if '.' not in x]
+    num_runs = len(runs)
+    for i in tqdm(range(0, num_runs)):
+        df = pd.read_csv(path + str(i) + '/output/predictions.csv')
         compounds = df['COMPOUND'].tolist()
         y = [labels[x] for x in compounds]
         scores = []
@@ -55,17 +58,14 @@ if __name__ == '__main__':
     auc_df = pd.DataFrame(auc_scores_dict)
     cols = ['rep'] + list(range(0, n_feats))
     auc_df = auc_df[cols]
-    auc_df.to_csv(settings['run_path'] + settings['run_name'] + '/' +
-                  'auc_score.csv', index=False)
+    auc_df.to_csv(path + 'auc_score.csv', index=False)
 
     sens_df = pd.DataFrame(sens_scores_dict)
     cols = ['rep'] + list(range(0, n_feats))
     sens_df = sens_df[cols]
-    sens_df.to_csv(settings['run_path'] + settings['run_name'] + '/' +
-                   'sens_score.csv', index=False)
+    sens_df.to_csv(path + 'sens_score.csv', index=False)
 
     spec_df = pd.DataFrame(spec_scores_dict)
     cols = ['rep'] + list(range(0, n_feats))
     spec_df = spec_df[cols]
-    spec_df.to_csv(settings['run_path'] + settings['run_name'] + '/' +
-                   'spec_score.csv', index=False)
+    spec_df.to_csv(path + 'spec_score.csv', index=False)
