@@ -10,7 +10,7 @@ sbatch <<EOT
 #!/bin/bash
 #SBATCH -c 4
 #SBATCH -N 1
-#SBATCH -t 12:00:00
+#SBATCH -t 6:00:00
 #SBATCH -p short
 #SBATCH --mem=32000
 #SBATCH -o logs/hostname_%j.out
@@ -26,8 +26,8 @@ cat $run
 echo
 uptime
 echo
-python scripts/feature_select.py $run $SLURM_ARRAY_TASK_ID
-python scripts/predict.py $run $SLURM_ARRAY_TASK_ID
+python scripts/feature_select.py $run \$SLURM_ARRAY_TASK_ID
+python scripts/predict.py $run \$SLURM_ARRAY_TASK_ID
 echo
 uptime
 echo
