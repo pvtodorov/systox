@@ -12,3 +12,5 @@ feature_selection/
 run_settings/
 
 plots/
+
+logs/
