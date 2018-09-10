@@ -94,7 +94,7 @@ You can retreive the same folds we used from synapse
 ./bash_scripts/get_folds.sh
 ```
 
-You can get a new set of folds by running. Note that this may change the outcome of the analysis.
+You can get a new set of folds by running. Note that generating new folds may change the outcome of the analysis as the original set of folds was generated used without a specific seeding.
 ```
 ./bash_scripts/generate_folds.sh
 ```
@@ -140,6 +140,8 @@ python scripts/predict.py <settings file> <fold number>
 
 * The fold numbers must be an array from 0-99
 </details>
+
+* An example SLURM scheduler script is provided in `bash_scripts/submit_many_backgrounds_predict.sh`.
 
 ### Processing the predictions
 
