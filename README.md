@@ -139,9 +139,9 @@ python scripts/predict.py <settings file> <fold number>
 ```
 
 * The fold numbers must be an array from 0-99
-</details>
 
 * An example SLURM scheduler script is provided in `bash_scripts/submit_many_backgrounds_predict.sh`.
+</details>
 
 ### Processing the predictions
 
