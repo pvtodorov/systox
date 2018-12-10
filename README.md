@@ -62,7 +62,7 @@ Go to Synapse and make an account. If you already have an account and have alrea
 
 Use the following command to login and store your credentials for Synapse.
 ```
-synapse login -u USER - p PASS --rememberMe
+synapse login -u USER -p PASS --rememberMe
 ```
 You are now logged in and can pull data from the Synapse project [syn11697964](https://www.synapse.org/#!Synapse:syn11697964). This is all automated via bash scripts and should require no additional configuration or direct intreaction with Synapse.
 
