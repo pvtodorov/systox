@@ -11,7 +11,7 @@ By following the instructions listed here a user can run through the whole proce
 
 * A *NIX based system for running bash scripts
 * git [(link)](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-* Python 3.4+ [(link)](https://www.python.org/downloads/)
+* Python 3.6+ [(link)](https://www.python.org/downloads/)
 * A Synapse account [(link)](http://docs.synapse.org/articles/getting_started.html)
 
 Optional:
@@ -158,7 +158,4 @@ The plots from figure 3 can be created by executing the following
 ```
 ./bash_scripts/draw_plots.sh
 ```
-This will generate a `plots/` directory. The directory will have the same folder structure as the `feature_selection/` directory. In each run's subdirectory there will be a number of files:
-
-- `rc_vc.json` will hold data for each step of the recursive feature elimination as a list of features at `n_features`
-- the plots contained in figure 3 as `.png` and `.pdf` files
+This will generate a `plots/` directory. The directory will have the same folder structure as the `feature_selection/` directory. In each run's subdirectory where the plots contained in figure 3 as `.png` and `.pdf` files.
