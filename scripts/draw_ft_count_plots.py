@@ -93,7 +93,7 @@ for databuild in databuilds:
             output_dir = 'plots/' + databuild + '/' + dataset_type + '/' + n + '/'
             if not os.path.exists(output_dir):
                 os.makedirs(output_dir)
-            dump_lists_of_features(df_rc, vc, output_dir)
+            #dump_lists_of_features(df_rc, vc, output_dir)
             if not os.path.exists(output_dir):
                 os.makedirs(output_dir)
             plot_rankings(df_rc, vc, output_dir)
