@@ -7,6 +7,8 @@ This repository does not contain any of the data, which is instead housed on Syn
 
 By following the instructions listed here a user can run through the whole process or parts of it.
 
+An alternative to using this GitHub repo and Synapse is the Dryad Data Repository package that accompanies that manuscript. The Dryad package contains data and code. The instructions can be found [(here)](https://github.com/pvtodorov/systox/blob/master/README_Dryad.md).
+
 ## Requirements
 
 * A *NIX based system for running bash scripts
