@@ -24,7 +24,7 @@ msgpack-python==0.5.6
 numpy==1.13.3
 pandas==0.20.2
 partd==0.3.8
-psutil==5.4.6
+psutil==5.6.6
 pyparsing==2.2.0
 python-dateutil==2.7.3
 pytz==2018.5
