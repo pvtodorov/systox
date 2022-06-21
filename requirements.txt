@@ -21,7 +21,7 @@ locket==0.2.0
 matplotlib==2.0.2
 msgpack==0.5.6
 msgpack-python==0.5.6
-numpy==1.13.3
+numpy==1.22.0
 pandas==0.20.2
 partd==0.3.8
 psutil==5.4.6
